@@ -1,0 +1,67 @@
+SERVER = {
+    'host': '0.0.0.0',
+    'port': 8000,
+    'workers': 1,
+    'debug': False,
+    'auto_reload': False,
+    'location': 'bot'
+}
+TP = {
+    'url': 'https://example.targetprocess.com',
+    'api_uri': 'api/v1',
+    'access_token': '',
+    'team': '',
+    'project': '',
+    'process': '',
+    'domain': '',
+    'story_attributes': {
+        'State':['State_1', 'State_2'],
+        'Priority': ['BV_1', 'BV_2'],
+        'Developer': []
+    }
+    'default_attributes': {
+        'State': 'State_1',
+        'Priority': 'BV_2'
+    }
+}
+SLACK = {
+    'token': '',
+    'group': '',
+    'api_url': 'https://slack.com/api',
+    'bot_name': '',
+    'url': 'https://example.slack.com'
+    'permission_denied_block': [
+        {
+            'type': 'section',
+            'text': {
+                'type': 'mrkdwn',
+                'text': 'Permission Denied'
+            }
+        },
+        {
+            'type': 'image',
+            'title': {
+                'type': 'plain_text',
+                'text': 'not_pass'
+            },
+            'image_url': 'https://media.giphy.com/media/5SAPlGAS1YnLN9jHua/giphy.gif',
+            'alt_text': 'not_pass'
+        }
+    ],
+    'map_subteam_members_changed': {
+        'added_users': 'append',
+        'removed_users': 'remove'
+    },
+    'attachments_fields': [
+        'fallback',
+        'pretext',
+        'author_name',
+        'author_link',
+        'title',
+        'title_link',
+        'text',
+        'fields',
+        'image_url',
+        'footer'
+    ]
+}
